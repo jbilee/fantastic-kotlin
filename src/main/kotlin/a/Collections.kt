@@ -27,4 +27,19 @@ class Collections {
         println("parallelogram" in readOnlyShapes) // false
     }
 
+    fun sets() {
+        // Read-only set
+        val readOnlyFruits: Set<String> = setOf("apple", "banana", "cherry", "cherry")
+
+        // Not possible
+        // readOnlyFruits.add("kiwi")
+
+        // Mutable set with explicit type declaration
+        val fruits: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
+
+        println(fruits) // [apple, banana, cherry]
+        fruits.add("kiwi")
+        println(fruits) // [apple, banana, cherry, kiwi]
+    }
+
 }
