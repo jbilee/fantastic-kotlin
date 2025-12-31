@@ -34,4 +34,9 @@ class Types {
         val double: Double = 11.55
     }
 
+    fun others() {
+        val trueFalse: Boolean = true
+        val alphabet: Char = 'a'
+    }
+
 }
