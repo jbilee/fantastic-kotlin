@@ -24,6 +24,13 @@ class ControlFlow {
 
         println(isUnderage) // true
 
+        // 또는 if문의 결과를 변수에 바로 저장
+        isUnderage = if (age < 18) {
+            true
+        } else {
+            false
+        }
+
         // 로직이 한 줄일 경우 간소화된 표현 가능
         age = 20
         isUnderage = if (age < 18) true else false
