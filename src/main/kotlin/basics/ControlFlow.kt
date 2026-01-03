@@ -126,3 +126,10 @@ class ControlFlow {
     }
 
 }
+
+fun main() {
+    val controlFlow = ControlFlow()
+
+    controlFlow.conditionals()
+    controlFlow.loops()
+}

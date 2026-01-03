@@ -9,11 +9,11 @@ class Types {
         val lastName: String = "Hanks"
 
         // String template 사용
-        println("His name is $firstName.")
+        println("His name is $firstName.") // His name is Tom.
 
-        println("His full name is ${firstName + " " + lastName}.")
+        println("His full name is ${firstName + " " + lastName}.") // His name is Tom Hanks.
         // or
-        println("His full name is ${"$firstName $lastName"}.")
+        println("His full name is ${"$firstName $lastName"}.") // His name is Tom Hanks.
     }
 
     fun numbers() {
@@ -39,4 +39,8 @@ class Types {
         val alphabet: Char = 'a'
     }
 
+}
+
+fun main() {
+    Types().strings()
 }

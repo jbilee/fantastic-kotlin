@@ -65,3 +65,11 @@ class Collections {
     }
 
 }
+
+fun main() {
+    val collections = Collections()
+
+    collections.lists()
+    collections.sets()
+    collections.maps()
+}

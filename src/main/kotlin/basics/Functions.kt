@@ -42,3 +42,7 @@ class Functions {
     }
 
 }
+
+fun main() {
+    Functions().main()
+}
