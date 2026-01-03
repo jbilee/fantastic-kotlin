@@ -12,3 +12,10 @@ package basics
 fun main() {
     println("hello, world")
 }
+
+// 한 .kt 파일 안에 자유롭게 함수와 클래스 구현 가능
+class Hello() {
+    fun sayHi() {
+        println("hello, world")
+    }
+}
