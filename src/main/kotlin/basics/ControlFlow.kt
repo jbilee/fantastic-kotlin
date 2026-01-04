@@ -3,14 +3,14 @@ package basics
 class ControlFlow {
 
     /*
-    * Kotlin has two conditionals: 'if' and 'when'
-    * Kotlin recommends using 'when' over 'if' when applicable because:
-    *  - Makes code easier to read.
-    *  - Makes it easier to add another branch.
-    *  - Leads to fewer mistakes.
-    *
-    * Kotlin has no ternary operator
-    * */
+    Kotlin has two conditionals: 'if' and 'when'
+    Kotlin recommends using 'when' over 'if' when applicable because:
+     - Makes code easier to read.
+     - Makes it easier to add another branch.
+     - Leads to fewer mistakes.
+
+    Kotlin has no ternary operator
+    */
     fun conditionals() {
         // 1. Using if
         var age: Int = 17
@@ -64,20 +64,20 @@ class ControlFlow {
     }
 
     /*
-    * Kotlin에서는 '..', '..<', 'downTo'로 범위를 표현
-    *
-    * Inclusive한 범위:
-    * 1..4 = 1, 2, 3, 4
-    *
-    * Exclusive한 범위:
-    * 1..<4 = 1, 2, 3
-    *
-    * 거꾸로 나열:
-    * 'z' downTo 'v' = 'z', 'y', 'x', 'w', 'v'
-    *
-    * n씩 건너뛰기:
-    * 1..5 step 2 = 1, 3, 5
-    * */
+    Kotlin에서는 '..', '..<', 'downTo'로 범위를 표현
+
+    Inclusive한 범위:
+    1..4 = 1, 2, 3, 4
+
+    Exclusive한 범위:
+    1..<4 = 1, 2, 3
+
+    거꾸로 나열:
+    'z' downTo 'v' = 'z', 'y', 'x', 'w', 'v'
+
+    n씩 건너뛰기:
+    1..5 step 2 = 1, 3, 5
+    */
     fun loops() {
         // 1. for 반복문
         for (number in 1..<5) {

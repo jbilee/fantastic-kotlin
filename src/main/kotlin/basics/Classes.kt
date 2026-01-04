@@ -58,8 +58,8 @@ fun exampleWithVehicle() {
 }
 
 /*
-* 클래스를 설계하는 다양한 방법
-* */
+클래스를 설계하는 다양한 방법
+*/
 class Contact(val name: String, var email: String) // Class header만 정의하는 방식, can omit braces { } (Kotlin이 생성자 만들어줌)
 
 class Pet(val name: String, val species: String) {

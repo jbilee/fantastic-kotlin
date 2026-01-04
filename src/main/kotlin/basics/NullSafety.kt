@@ -1,8 +1,8 @@
 package basics
 
 /*
-* Kotlin의 null safety 개념에서 사용하는 문법은 자바스크립트의 optional chaining과 유사
-* */
+Kotlin의 null safety 개념에서 사용하는 문법은 자바스크립트의 optional chaining과 유사
+*/
 
 fun main() {
     NullSafety().safeCalls()
@@ -40,10 +40,10 @@ class NullSafety {
 
     fun elvisOperator() {
         /*
-        * Elvis operator = ?:
-        *
-        * Used to return a default value if the result is null
-        * */
+        Elvis operator = ?:
+
+        Used to return a default value if the result is null
+        */
 
         val nullString: String? = null
         println(nullString?.length ?: 0) // 0
