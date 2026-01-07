@@ -18,7 +18,7 @@ fun main() {
     val cat = Cat("meowww")
     cat.makeSound() // meowww
 
-    val bus = Bus()
+    val bus = Bus("Tom Hanks")
     bus.makeSound() // vrooom
     bus.printOwner() // Owned by: Tom Hanks
 
@@ -64,12 +64,10 @@ interface Asset {
     fun printOwner()
 }
 
-class Bus : Vehicle, Asset {
+class Bus(override val owner: String) : Vehicle, Asset {
     override fun makeSound() {
         println("vrooom")
     }
-
-    override val owner: String = "Tom Hanks"
 
     override fun printOwner() {
         println("Owned by: $owner")
