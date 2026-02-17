@@ -37,8 +37,13 @@ class Lambda {
         // 람다식 즉시 실행 (람다식 끝에 괄호 추가)
         println({ text: String -> text.uppercase() }("hello")) // HELLO
 
-        // Trailing lambda = 람다식을 인자로 전달할 때, 해당 람다식이 유일한 함수형 파라미터일 경우 괄호 생략 가능
         val numbers = listOf(1, 10, 3, 6)
+
+        // 인자로 람다식 전달
+        val increasedNumbers = numbers.map({ x -> x + 1 })
+        println(increasedNumbers) // [2, 11, 4, 7]
+
+        // Trailing lambda = 람다식을 인자로 전달할 때, 해당 람다식이 유일한 함수형 파라미터일 경우 괄호 생략 가능
         val filteredNumbers = numbers.filter { x -> x > 5 } // filter()에서 괄호 생략됨
         println(filteredNumbers) // [10, 6]
     }
