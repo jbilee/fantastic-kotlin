@@ -71,7 +71,20 @@ class Lambda {
         // Receiver 형태이기 때문에 파라미터 명시 없이 객체의 메서드만 호출 가능
         render {
             drawCircle() // 🟠 Drawing a circle
-            drawText("hi") // Printing text: hi
+
+            // this로 접근도 가능
+            this.drawText("hi") // Printing text: hi
+        }
+
+        // receiver를 받는 문법일 때 추가 인자를 받을 경우
+        fun renderWithDimensions(draw: Whiteboard.(Int, Int) -> Unit) {
+            val whiteboard = Whiteboard()
+            whiteboard.draw(100, 200)
+        }
+
+        // 추가 인자는 명시 필요
+        renderWithDimensions { x, y ->
+            println("Drawing with dimensions: $x x $y") // Drawing with dimensions: 100 x 200
         }
     }
 
