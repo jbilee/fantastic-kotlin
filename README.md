@@ -7,7 +7,7 @@ How I studied and perceived Kotlin as a programming language.
 Here's the list of directories and what they contain:
 
 ```text
-[main] Contains README ←You are here
+[root] Contains README ←You are here
 
 [learn-language] Kotlin features and syntax
 ```
