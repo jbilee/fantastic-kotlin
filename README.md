@@ -4,7 +4,7 @@ How I studied and perceived Kotlin as a programming language.
 
 ## How to navigate
 
-Here's the list of branches and what they contain:
+Here's the list of directories and what they contain:
 
 ```text
 [main] Contains README ←You are here
