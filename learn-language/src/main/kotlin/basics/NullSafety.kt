@@ -6,6 +6,7 @@ Kotlin의 null safety 개념에서 사용하는 문법은 자바스크립트의 
 
 fun main() {
     NullSafety().safeCalls()
+    NullSafety().casting()
 }
 
 class NullSafety {
@@ -47,6 +48,24 @@ class NullSafety {
 
         val nullString: String? = null
         println(nullString?.length ?: 0) // 0
+    }
+
+    fun casting() {
+        /*
+        Safe cast operator = as?
+
+        Used to safely cast an object to a different type, returning null if the cast is not possible
+        */
+
+        val mysteryDummy: DummyClass? = null
+
+        // Safe cast to DummyClass
+        val dummyAsDummyClass = mysteryDummy as? DummyClass
+        println(dummyAsDummyClass) // null
+
+        // Use with Elvis operator to provide a default value if the cast fails
+        val dummyOrDefault = mysteryDummy as? DummyClass ?: DummyClass("Default", 0)
+        println(dummyOrDefault.name) // Default
     }
 
 }
