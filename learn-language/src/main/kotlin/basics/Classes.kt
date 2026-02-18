@@ -62,6 +62,13 @@ fun exampleWithVehicle() {
 */
 class Contact(val name: String, var email: String) // Class header만 정의하는 방식, can omit braces { } (Kotlin이 생성자 만들어줌)
 
+// Class header 대신 클래스 본문에서 프로퍼티 선언하는 방식 (same effect as Contact above)
+// 객체 생성할 때 validation logic이 필요한 경우 유용
+class Contact2(name: String, email: String) {
+    val name: String = name
+    var email: String = email
+}
+
 class Pet(val name: String, val species: String) {
     // { } 안에 객체의 상태(프로퍼티)를 선언할 경우 초기화를 해줘야 함
     private var age: Int = 0 // 이렇게 하면 사용자가 직접 age 값을 지정할 수 없게 됨
