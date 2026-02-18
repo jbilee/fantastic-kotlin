@@ -13,7 +13,7 @@ Extension function은 해당 클래스의 내부 메서드가 되는게 아니�
  ㄴ 왜 그렇게 설계됐는가? -> 기존 API를 break 혹은 exploit하지 않고 추가적인 기능을 더할 수 있도록 하기 위해
 */
 
-class Developer(val name: String) {
+class Developer(val name: String, var experience: Int = 0) {
     fun writeCode() {
         println("$name has written some code")
     }
@@ -27,10 +27,19 @@ fun Developer.deployCode(): Unit {
 // Extended function as a one-liner
 fun Developer.getTitle() = "$name the Developer" // this 키워드 없이 다이렉트로 프로퍼티 접근 가능 (private/protected일 경우 접근 불가)
 
+/*
+Extension properties = extension function과 유사--기존 클래스에 없던 프로퍼티를 추가하는 것
+Extension properties는 backing field를 가질 수 없기 때문에, 항상 getter만 가질 수 있음
+*/
+val Developer.isSenior: Boolean
+    get() = this.experience > 5
+
 fun main() {
-    val dev = Developer("Tom")
+    val dev = Developer("Tom", 10)
 
     println(dev.getTitle()) // Tom the Developer
     dev.writeCode() // Tom has written some code
     dev.deployCode() // Tom has deployed the code
+
+    println(dev.isSenior) // true
 }
