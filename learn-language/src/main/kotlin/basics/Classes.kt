@@ -64,7 +64,7 @@ class Contact(val name: String, var email: String) // Class header만 정의하�
 
 // Class header 대신 클래스 본문에서 프로퍼티 선언하는 방식 (same effect as Contact above)
 // 객체 생성할 때 validation logic이 필요한 경우 유용
-class Contact2(name: String, email: String) {
+class Contact2(name: String, email: String) { // 여기에선 val/var을 쓰지 않음--body에서 함
     val name: String = name
     var email: String = email
 }
